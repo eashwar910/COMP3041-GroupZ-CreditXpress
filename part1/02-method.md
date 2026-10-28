@@ -1,0 +1,3 @@
+# Method
+
+We combined three techniques. First, a hands-on walkthrough: we installed the app fresh on a test device with an empty contact list and recorded every screen from first launch [device: Xiaomi Pad 7, Android version 16, app version 2.1.2, 26/10/2026]. To see how the app handles refusal, we repeated the flow denying each permission request. Second, we read the app's privacy policy to find what each requested data type is used for. Third, we compared what we observed with Android's permission guidance and Google Play's policies for loan apps. [Add Member B’s method] We used only our own details and did not apply for a loan. We used no surveys or interviews, as these require ethics approval. Our findings reflect X device(s) and X app version. [to be changed]
