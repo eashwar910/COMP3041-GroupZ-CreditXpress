@@ -1,3 +1,39 @@
+## Issue A: Location is requested before the user has an account.  
+
+### Violated Code of Ethics
+
+**1.06. Be fair and avoid deception in all statements, particularly public ones, concerning software or related documents, methods and tools.**
+
+Application: The app presents a disclosure list where only four of the five intended purposes for collecting location functionally depend on the user having an existing account, which is not the case for first-time users. This misleads and deceives the user regarding how the data is actually being used at that stage.
+
+**3.06. Work to follow professional standards, when available, that are most appropriate for the task at hand, departing from these only when ethically or technically justified.**
+
+Application: The engineering team failed to establish platform development standards such as android developer guidance requiring in-context permission requests without an ethical or technical justification for the users.
+
+**3.12. Work to develop software and related documents that respect the privacy of those who will be affected by that software.**
+
+Application: The app unnecessarily diminishes user privacy by capturing sensitive geographical data prior to the user signing-up or taking a loan.
+
+**3.13. Be careful to use only accurate data derived by ethical and lawful means, and use it only in ways properly authorized.** 
+
+Application: The app relies on premature user consent to collect location data prior to sign-up without any context or clear loan terms.
+
+### Ethical Theory
+
+**Deontology**
+
+The morality of an action is based on whether it follows a set of rules or duties. The app violates the universal duty of truthfulness and non-deception by requesting location permissions when four of the five justifications provided do not functionally apply yet. The engineer treats the unauthenticated user merely as a tool for premature risk-scoring data collection whilst circumventing their informed consent and autonomy. 
+
+**Utilitarianism (Consequentialism)**
+
+The morality of an action is determined solely by its outcomes or consequences. A rule-utilitarian analysis shows that collecting out-of-context data erodes public trust in software platforms and exposes thousands of prospective users and contacts of said users to unwanted privacy risks without any immediate functional benefit.
+
+### Where SE Code is Insufficient
+
+This issue causes a conflict between rule 2.09 (promote no interest adverse to their employer or client) and rule 3.12 (develop software and related documents that respect the privacy of those affected by the software). As the Code does not specify which principle takes a higher priority, deontology is used to show that the universal duty against deception and privacy invasion trumps corporate data-gathering goals.
+
+
+
 ## Issue B: The app requests location twice before sign-up and a second denial triggers permanent “don't ask again”
 
 ### Violated Code of Ethics
@@ -71,3 +107,43 @@ Utilitarianism weighs consequences across affected parties. The company benefits
 **Care Ethics**
 
 The borrower is vulnerable due to financial need and limited understanding of compound rates, and the design exploits this imbalance. Care ethics asks whether a caring, responsible professional would reveal the full cost only when the borrower cannot back out. The answer is no. This theory captures the relational dimension the Code cannot, and it guides engineers whose concerns are ignored: continue advocating for the vulnerable party and document the concerns.
+
+
+
+## Issue D: Users cannot check who the lender is or contact it without signing in
+
+## Violated Code of Ethics
+
+**1.06. Be fair and avoid deception in all statements, particularly public ones, concerning software or related documents, methods and tools.**
+
+Application: The app publishes privacy policies that point to dead data-processing domains (404 errors), list conflicting corporate addresses, and reference Android permissions inside an iOS build fails the requirement to provide honest, non-deceptive documentation.
+
+**3.08. Ensure that specifications for software on which they work have been well documented, satisfy the users’ requirements and have the appropriate approvals.**
+
+Application: The engineering team released software with broken URL links, platform-mismatched code references, and contradicting company addresses and failed to maintain properly reviewed and documented software specifications.
+
+**3.12. Work to develop software and related documents that respect the privacy of those who will be affected by that software.**
+
+Application: This clause extends privacy obligations to anyone affected by the software, which includes non-user third parties. Building features that harvest emergency contact details without notifying or seeking consent from those third parties directly violates their privacy rights.
+
+**3.13. Be careful to use only accurate data derived by ethical and lawful means, and use it only in ways properly authorized.**
+
+Application: The engineer designed the software to gather contact details of non-users through the borrower’s phone without the contact’s authorisation. The data is not derived by ethical or properly authorised means.
+
+**6.07. Be accurate in stating the characteristics of software on which they work, avoiding not only false claims but also claims that might reasonably be supposed to be speculative, vacuous, deceptive, misleading, or doubtful.**
+
+Application: The app prominently displays a “licensed in Malaysia” badge on the home screen whilst wiring the button to a Whatsapp sign-in form instead of displaying the license number creates a deceptive and misleading claim about the app’s transparency and licensing features. 
+
+## Ethical Theory
+
+**Deontology**
+
+The morality of an action is based on whether it follows a set of rules or duties. This app violates this by hiding basic expected lender details and support behind a Whatsapp login wall, publishing privacy documents to dead domain links with 404 errors, and collecting third-party “emergency contacts” without the users’ knowledge or consent. It breaks the rules of transparency and respect for autonomy especially by harvesting non-users' contact details which treats those third parties purely as collateral for debt collection without their free consent.
+
+**Utilitarianism (Consequentialism)**
+
+The morality of an action is determined solely by its outcomes or consequences. While hiding contact details and requiring sign-in may benefit the lender and forcing user registration and capturing lead data, it creates widespread harm across stakeholders and borrowers. The borrowers are also left without support or verifiable credentials and non-user contacts suffer potential harassment and distress because the app’s deceptive claims damage overall public trust.
+		
+### Where the SE Code Is Insufficient
+ The code is silent on areas pertaining to harvesting data from unconsenting non-user third parties, collected as emergency contacts. A Kantian framework is required to establish that non-users possess equal rights to consent and privacy. As the business chooses to hide the support behind Whatsapp and employ predatory monetisation tactics, utilitarianism helps engineers to identify when they need to exercise professional courage to report systemic corporate misconduct.
+
