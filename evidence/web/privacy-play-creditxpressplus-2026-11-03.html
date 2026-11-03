@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #f3f7fc;
+      --paper: #ffffff;
+      --ink: #17243a;
+      --muted: #53627a;
+      --accent: #2563eb;
+      --accent-deep: #1746a2;
+      --accent-soft: #eaf1ff;
+      --line: #dbe5f5;
+      --shadow: 0 18px 55px rgba(25, 67, 145, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 0%, rgba(37, 99, 235, 0.14), transparent 28rem),
+        linear-gradient(180deg, #edf3ff 0, var(--page) 28rem);
+      color: var(--ink);
+      font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(100% - 32px, 920px);
+      margin: 48px auto;
+      overflow: hidden;
+      background: var(--paper);
+      border: 1px solid rgba(219, 229, 245, 0.9);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .document-header {
+      position: relative;
+      padding: 58px 64px 48px;
+      overflow: hidden;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--accent-deep), var(--accent));
+    }
+
+    .document-header::after {
+      position: absolute;
+      right: -90px;
+      bottom: -125px;
+      width: 320px;
+      height: 320px;
+      border: 52px solid rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
+      content: "";
+    }
+
+    h1 {
+      position: relative;
+      z-index: 1;
+      margin: 0 0 28px;
+      font-size: clamp(2.25rem, 6vw, 3.75rem);
+      line-height: 1.1;
+      letter-spacing: -0.045em;
+    }
+
+    .document-meta {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 24px;
+    }
+
+    .document-meta p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.925rem;
+      line-height: 1.55;
+      overflow-wrap: anywhere;
+    }
+
+    .document-meta p:nth-child(6),
+    .document-meta p:last-child {
+      grid-column: 1 / -1;
+    }
+
+    .document-meta a {
+      color: inherit;
+      text-decoration-color: rgba(255, 255, 255, 0.45);
+      text-underline-offset: 3px;
+    }
+
+    .document-body {
+      padding: 28px 64px 64px;
+    }
+
+    section {
+      padding-top: 30px;
+    }
+
+    h2,
+    h3 {
+      color: var(--accent-deep);
+      line-height: 1.3;
+      text-wrap: balance;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(1.35rem, 3vw, 1.7rem);
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      margin: 0 0 14px;
+      padding: 11px 16px;
+      border-left: 4px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: var(--accent-soft);
+      font-size: 1.12rem;
+    }
+
+    .document-body p {
+      margin: 0 0 15px;
+      color: var(--muted);
+    }
+
+    .document-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+      padding: 20px 22px;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: #f8faff;
+    }
+
+    .contact-details p {
+      margin: 0;
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    .contact-details a {
+      color: var(--accent-deep);
+      text-decoration-color: rgba(23, 70, 162, 0.35);
+      text-underline-offset: 3px;
+    }
+
+    a:hover {
+      text-decoration-thickness: 2px;
+    }
+
+    @media (max-width: 680px) {
+      body {
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .document-header,
+      .document-body {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      .document-header {
+        padding-top: 42px;
+        padding-bottom: 38px;
+      }
+
+      .document-meta {
+        grid-template-columns: 1fr;
+      }
+
+      .document-meta p:nth-child(6),
+      .document-meta p:last-child {
+        grid-column: auto;
+      }
+
+      .document-body {
+        padding-top: 18px;
+        padding-bottom: 42px;
+      }
+
+      section {
+        padding-top: 25px;
+      }
+    }
+
+    @media print {
+      @page {
+        margin: 18mm;
+      }
+
+      body {
+        background: #ffffff;
+        color: #000000;
+        font-size: 10.5pt;
+      }
+
+      main {
+        width: 100%;
+        margin: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .document-header {
+        padding: 0 0 24px;
+        color: #000000;
+        background: #ffffff;
+        border-bottom: 2px solid #333333;
+      }
+
+      .document-header::after {
+        display: none;
+      }
+
+      .document-meta p,
+      .document-meta a {
+        color: #000000;
+      }
+
+      .document-body {
+        padding: 0;
+      }
+
+      section {
+        break-inside: avoid-page;
+      }
+
+      h2,
+      h3 {
+        color: #000000;
+        break-after: avoid-page;
+      }
+
+      h3,
+      .contact-details {
+        background: #ffffff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="document-header">
+      <h1>Privacy Policy</h1>
+      <div class="document-meta">
+        <p>Application: CreditXpress Plus</p>
+        <p>Effective Date: 21 July 2026</p>
+        <p>Data Controller: Opg Capital Holdings Sdn Bhd</p>
+        <p>SSM Registration No.: 202101043135 (1443435-P)</p>
+        <p>Moneylender Licence: KPKT WL3337/07/01-11/020227</p>
+        <p>Registered Contact Address: C-10-7 KL Trillion, 338 Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia</p>
+        <p>Email: <a >info@creditxpress.com.my</a></p>
+        <p>Phone: <a >+60 11-6993 6134</a></p>
+        <p>Website and Data Storage Server: <a>https://www.creditxpressplus.com</a></p>
+      </div>
+    </header>
+
+    <article class="document-body">
+      <section>
+        <h2>1. Introduction</h2>
+        <p>This Privacy Policy explains how Opg Capital Holdings Sdn Bhd (&quot;we&quot;, &quot;us&quot; or &quot;our&quot;), as the operator of CreditXpress Plus, collects, uses, processes, stores, protects and discloses personal data when you access or use the application, website, loan application services, customer support channels and related financial services.</p>
+        <p>We process personal data in accordance with the Personal Data Protection Act 2010 of Malaysia, applicable moneylending and consumer-protection requirements, and other laws and regulatory obligations that apply to our services.</p>
+        <p>By creating an account, submitting a loan application, using CreditXpress Plus, or granting a device permission after receiving the relevant disclosure, you acknowledge that you have read and understood this Privacy Policy and consent to the processing described below. Where consent is optional, you may refuse or withdraw it, although the related feature or automated assessment may become unavailable.</p>
+      </section>
+
+      <section>
+        <h2>2. Personal Data We Collect</h2>
+        <p>Depending on the services you request and the permissions you grant, we may collect your name, identity-card or passport number, date of birth, gender, email address, mobile number, residential address, employment and income information, bank-account and payment information, loan application details, repayment information, government-issued identification documents, identity-verification images, customer-service communications, marketing preferences, IP address, device and network information, and other information you submit when registering for or using our services.</p>
+        <p>Personal data that must be uploaded or retained is transmitted through encrypted channels and stored on protected systems associated with https://www.creditxpressplus.com. We collect only data reasonably connected to identity verification, loan processing, risk control, fraud prevention, account security, service delivery, legal compliance and customer support.</p>
+      </section>
+
+      <section>
+        <h2>3. Permission-Based Data Collection</h2>
+        <p>CreditXpress Plus requests device permissions only when needed for a clearly stated function. Before requesting sensitive permission, we provide an in-app disclosure explaining the data involved and its purpose. Permission-based data that is uploaded or retained is encrypted in transit and stored on protected systems associated with https://www.creditxpressplus.com.</p>
+        <p>You may refuse or revoke a permission through your device settings. Revoking a permission does not affect processing already lawfully completed, but may prevent identity verification, document submission, automated risk assessment, repayment reminders or other related functions.</p>
+      </section>
+
+      <section>
+        <h3>3.1 Location Information</h3>
+        <p>With your explicit permission, CreditXpress Plus may collect approximate or precise location signals while you actively use the application or complete a loan application. We use location information to confirm service availability, support identity and address verification, detect abnormal access, assess fraud risk and protect your account.</p>
+        <p>We do not use location information for unrelated advertising or continuous unrelated background tracking. Location data that is uploaded or retained is encrypted and stored on protected systems associated with https://www.creditxpressplus.com, and is accessible only to authorised personnel and service providers with a legitimate need.</p>
+      </section>
+
+      <section>
+        <h3>3.2 Photos, Media, Storage and Files</h3>
+        <p>With your permission, CreditXpress Plus may allow you to select and upload specific photos or files required for a loan application, identity verification, income verification, bank-account verification, agreement execution, repayment evidence or customer support. We do not intentionally scan or upload unrelated personal photos, videos or files.</p>
+        <p>The files you select are transmitted through HTTPS encryption and stored on protected systems associated with https://www.creditxpressplus.com. They are retained only for the service purpose, legal obligation, dispute handling, fraud prevention or record-keeping period that applies to the relevant file.</p>
+      </section>
+
+      <section>
+        <h3>3.3 Camera</h3>
+        <p>With your permission, CreditXpress Plus uses the camera only when you actively capture an identity document, selfie, liveness image, verification video, supporting document or repayment evidence. The camera is not used for unrelated background monitoring.</p>
+        <p>Camera images and videos that you submit are encrypted during transmission and stored on protected systems associated with https://www.creditxpressplus.com. They are used for identity verification, fraud prevention, loan processing, account security and regulatory compliance.</p>
+      </section>
+
+      <section>
+        <h3>3.4 Device and Identification Information</h3>
+        <p>CreditXpress Plus may collect device model, operating-system version, application version, device identifiers, IP address, language and region settings, network information, SIM or network status, session identifiers, login records, crash diagnostics and security-risk signals.</p>
+        <p>We use this information to authenticate sessions, detect duplicate or suspicious applications, prevent account takeover, identify device cloning or emulator abuse, troubleshoot technical problems and comply with security obligations. Data that is uploaded or retained is encrypted and stored on protected systems associated with https://www.creditxpressplus.com.</p>
+      </section>
+
+      <section>
+        <h3>3.5 Installed Applications</h3>
+        <p>With your explicit permission, CreditXpress Plus may collect limited metadata about applications installed on your device, including application name, package name, version, installation time and update time. We do not access private content, messages, files or account information inside other applications.</p>
+        <p>Installed-application metadata is used only for fraud detection, device-risk assessment, identification of suspicious tools, emulator or cloned-device detection, and prevention of repeated or false loan applications. The metadata is encrypted and stored on protected systems associated with https://www.creditxpressplus.com; it is not sold or used for unrelated advertising.</p>
+      </section>
+
+      <section>
+        <h3>3.6 Main Account Information</h3>
+        <p>With your explicit permission and where supported by the operating system, CreditXpress Plus may process limited information associated with the primary account configured on your device, such as an account identifier or account status. We use this information for identity-consistency checks, duplicate-registration detection, fraud prevention, account security, risk assessment and loan pre-qualification.</p>
+        <p>We do not access your account password, email content, private messages, cloud files or unrelated account content. Information that is uploaded or retained is encrypted and stored on protected systems associated with https://www.creditxpressplus.com.</p>
+      </section>
+
+      <section>
+        <h3>3.7 Calendar Information</h3>
+        <p>With your explicit permission, CreditXpress Plus may process financial calendar information from the previous 12 months and may create or manage loan-service reminders. Relevant entries may include repayment dates, billing dates, salary dates and other financial events connected to repayment planning.</p>
+        <p>We use calendar information to help prevent missed payments, support repayment scheduling and verify financial-schedule consistency. We do not intentionally collect, modify or delete unrelated personal events. Calendar data that is uploaded or retained is encrypted and stored on protected systems associated with https://www.creditxpressplus.com.</p>
+      </section>
+
+      <section>
+        <h3>3.8 Microphone and Identity-Verification Recording</h3>
+        <p>With your explicit permission, CreditXpress Plus may use the microphone when you actively record an identity-verification video, complete a voice-verification step, confirm information during the loan process, or provide evidence for customer support or dispute resolution. The microphone is not activated for unrelated or continuous background listening.</p>
+        <p>Audio and video submitted through this process are used for identity verification, fraud prevention, account security, loan processing and dispute handling. The recording is encrypted during transmission and stored on protected systems associated with https://www.creditxpressplus.com for only as long as necessary for those purposes or applicable legal obligations.</p>
+      </section>
+      <!-- <section>
+        <h3>3.9 Call Log</h3>
+        <p>CreditXpress Plus may request Call permission with your consent to support loan verification, fraud prevention, account security, repayment follow-up, and customer service in Malaysia.</p>
+        <p>When this permission is enabled, we may collect limited call-related information such as phone number, call type, call time, call duration, and call status. We do not record call audio, monitor call content, read your private conversations, or use this information for advertising or resale.</p>
+        <p>The collected call-related information is encrypted during transmission and securely stored at https://www.creditxpressplus.com. Access is restricted to authorized personnel and trusted service providers only for loan assessment, risk control, compliance review, and customer support.</p>
+        <p>You may disable Call permission at any time in your device settings. However, disabling this permission may affect identity verification, fraud prevention checks, or certain loan service features.</p>
+      </section> -->
+      <section>
+        <h3>3.9 Contacts</h3>
+        <p>With your explicit permission, CreditXpress Plus may access contact-directory information, including contact names, phone numbers and available creation or addition dates. We use this information for reference or emergency-contact screening, identity consistency, fraud prevention, account recovery, credit-risk assessment and lawful loan servicing.</p>
+        <p>Contact information is not sold or used for unrelated marketing. Contact data that is uploaded or retained is transmitted through encrypted channels and stored on protected systems associated with https://www.creditxpressplus.com. Access is limited to authorised functions and personnel, and the data is deleted or anonymised when it is no longer required by the service or law.</p>
+      </section>
+
+      <section>
+        <h3>3.10 Financial SMS Information</h3>
+        <p>With your explicit permission, CreditXpress Plus may process financial SMS messages from the previous 12 months. The scope is limited to messages that appear related to banking, salary payments, payment confirmations, wallet transactions, loan disbursement, loan repayment, transaction alerts and other financial activity. Relevant fields may include sender, timestamp, transaction description and amount.</p>
+        <p>We use financial SMS information for credit-risk assessment, repayment-capacity analysis, fraud prevention, identity consistency and loan review. We do not intentionally collect private social messages unrelated to financial services. Financial SMS data is encrypted during transmission and stored on protected systems associated with https://www.creditxpressplus.com; it is not sold or used for unrelated advertising.</p>
+      </section>
+
+      <section>
+        <h2>4. Purposes of Processing</h2>
+        <p>We process personal data to register and maintain accounts; verify identity and eligibility; review loan applications; assess affordability and credit risk; prevent fraud and unauthorised access; prepare and perform loan agreements; disburse funds and process repayments; manage overdue accounts; provide support; resolve complaints and disputes; improve service security and performance; maintain business, audit and accounting records; send service communications; and comply with legal, regulatory, court and government requirements.</p>
+        <p>Marketing communications are sent only where permitted by law and subject to any required consent. You may opt out of marketing without affecting essential account, security, loan-status or repayment communications.</p>
+      </section>
+
+      <section>
+        <h2>5. Legal Basis and Consent</h2>
+        <p>We rely on consent, steps requested before entering a contract, performance of a contract, compliance with legal obligations, and legitimate interests in fraud prevention, information security, responsible lending, debt administration, service improvement and legal protection, as applicable to the processing activity.</p>
+        <p>Where processing is based on consent, you may withdraw that consent by changing device permissions or contacting us. Withdrawal does not affect processing completed before withdrawal and may limit the service that depends on the relevant data.</p>
+      </section>
+
+      <section>
+        <h2>6. Disclosure to Third Parties</h2>
+        <p>We may disclose personal data only where necessary to banks and payment providers, credit-reporting or credit-reference organisations where legally permitted, identity-verification providers, fraud-prevention and risk-control providers, cloud and technical-service providers, customer-support providers, professional advisers, auditors, lawful debt-management providers, regulators, courts, law-enforcement agencies and other competent authorities.</p>
+        <p>Recipients must process personal data only for authorised purposes and apply appropriate confidentiality and security safeguards. We do not sell personal data. We may also disclose information where required by law, to enforce an agreement, protect users or our legal rights, or investigate suspected fraud or security incidents.</p>
+      </section>
+
+      <section>
+        <h2>7. International Transfers</h2>
+        <p>Personal data may be processed in Malaysia or in another jurisdiction where an authorised service provider operates secure infrastructure. Where data is transferred across borders, we take reasonable steps to ensure that the transfer complies with applicable law and is protected by contractual, organisational and technical safeguards. Our primary website and disclosed storage endpoint is https://www.creditxpressplus.com.</p>
+      </section>
+
+      <section>
+        <h2>8. Data Retention and Deletion</h2>
+        <p>We retain personal data only for as long as necessary for the purpose for which it was collected and for any additional period required by law, licence conditions, accounting obligations, fraud prevention, dispute resolution, debt administration or enforcement of legal rights. Historical financial SMS and financial calendar access is limited to the previous 12 months at the time of collection.</p>
+        <p>When retention is no longer necessary, we delete, anonymise or securely destroy the data. A deletion request may be limited where we must retain information for an active agreement, outstanding obligation, legal claim, regulatory requirement, fraud investigation or other lawful reason.</p>
+      </section>
+
+      <section>
+        <h2>9. Security Measures</h2>
+        <p>We maintain reasonable administrative, technical and physical safeguards, including HTTPS or equivalent encryption in transit, access controls, authentication measures, role-based permissions, confidentiality obligations, security logging, monitoring, backup controls, fraud-detection measures and periodic security review.</p>
+        <p>No transmission or storage system can be guaranteed completely secure. If a security incident creates a legally reportable risk, we will take reasonable containment, investigation and notification measures required by applicable law.</p>
+      </section>
+
+      <section>
+        <h2>10. Cookies and Similar Technologies</h2>
+        <p>Our website may use cookies and similar technologies to maintain sessions, remember preferences, measure anonymous usage, diagnose errors, prevent abuse and improve service performance. You may control cookies through browser settings, although disabling essential cookies may affect website functionality.</p>
+      </section>
+
+      <section>
+        <h2>11. Your Rights</h2>
+        <p>Subject to the Personal Data Protection Act 2010 and other applicable law, you may request access to personal data we hold about you, correction of inaccurate or outdated data, information about processing and disclosure, withdrawal of consent, restriction of direct marketing, or deletion where no lawful retention ground applies.</p>
+        <p>To exercise a right, contact us at info@creditxpress.com.my, call +60 11-6993 6134, or write to C-10-7 KL Trillion, 338 Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia. We may request reasonable identity verification before acting on a request.</p>
+      </section>
+
+      <section>
+        <h2>12. Children's Privacy</h2>
+        <p>CreditXpress Plus is intended only for persons aged 18 or older who are legally eligible to use the financial services offered. We do not knowingly collect personal data from a person under 18. If we become aware that a minor's data was collected without a lawful basis, we will take reasonable steps to delete it.</p>
+      </section>
+
+      <section>
+        <h2>13. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy to reflect changes in law, regulatory requirements, technology, permissions or services. Material changes will be communicated through the application, website, email, SMS or another appropriate channel before or when the changes take effect, as required by law. The effective date at the beginning of the Policy identifies the current version.</p>
+      </section>
+
+      <section>
+        <h2>14. Contact and Complaints</h2>
+        <div class="contact-details">
+          <p>Data Controller: Opg Capital Holdings Sdn Bhd</p>
+          <p>SSM Registration No.: 202101043135 (1443435-P)</p>
+          <p>Moneylender Licence: KPKT WL3337/07/01-11/020227</p>
+          <p>Address: C-10-7 KL Trillion, 338 Jalan Tun Razak, 50400 Kuala Lumpur, Malaysia</p>
+          <p>Email: <a >info@creditxpress.com.my</a></p>
+          <p>Phone: <a >+60 11-6993 6134</a></p>
+          <p>Website: <a>https://www.creditxpressplus.com</a></p>
+        </div>
+        <p>You may use these contact details for privacy questions, access or correction requests, consent withdrawal, complaints, or concerns about how your personal data is handled.</p>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
