@@ -16,7 +16,7 @@ On iOS the app opened straight to a browsable home screen, so Issues A and B bel
 
 1. The home screen shows "The highest amount RM 10,000", "Daily rate 0.05%", "Loan term up to 91 days" and "3–6 installments, flexible repayment", with an "Apply Now" button. [Figure 5]
 2. Tapping "Licensed in Malaysia", "More flexible repayment terms" or the customer-support (headset) icon opens the same WhatsApp login page. [Figure 6, Figure 4]
-3. The login page accepts only a WhatsApp number and a WhatsApp OTP. No email, password or guest option is offered. [Figure 4]
+3. The login page asks for a WhatsApp number and a one-time password (OTP). The iOS screen we recorded sends the OTP by WhatsApp only [Figure 6]; the Android login page also offers an SMS OTP [Figure 4]. No email, password or guest option is offered on either.
 4. The in-app privacy policy states that use of the app counts as acknowledgement of the policy, and refers to "Android runtime permissions" even though it is shown in the iOS app. [Figures 7–8]
 5. The policy names https://www.creditxpressx.com/ as the "official service website and data processing domain". On 29/10/2026 this address returned "404 Not Found".
 6. The website's terms give two different office addresses for the same company (Bayan Lepas, Penang in section 1, Kuala Lumpur in the "Issuing Entity" box). The page title advertises "RM500–RM20,000", while the app advertises up to RM 10,000 (Credit Xpress, 2026b).
@@ -41,7 +41,7 @@ A fair reading: a daily rate is accurate, and short loans (up to 91 days) are so
 
 ## Issue D: Users cannot check who the lender is or contact it without signing in
 
-Before sign-in, the home screen invites trust ("Licensed in Malaysia") but does not let the user check it. Tapping the licence tile opens the WhatsApp login page rather than a licence number [Figure 6]. The support icon does the same, so a person with a question or complaint must first hand over a phone number. The only sign-in route is WhatsApp, so a user without WhatsApp cannot ask anything at all [Figure 4].
+Before sign-in, the home screen invites trust ("Licensed in Malaysia") but does not let the user check it. Tapping the licence tile opens the WhatsApp login page rather than a licence number [Figure 6]. The support icon does the same, so a person with a question or complaint must first hand over a phone number. The number field asks for a WhatsApp number, and the iOS screen offers only a WhatsApp OTP [Figure 6]. Android also offers an SMS OTP [Figure 4], but on either platform a user cannot ask a question without first giving a phone number.
 
 The documents that should fill this gap are not reliable. The privacy policy counts simply "using our Services" as acknowledgement of the policy [Figure 8], yet the "data processing domain" it names returned a 404 error when we visited. It also refers to Android permissions inside the iOS app, which suggests it was not written for the platform where it appears. The company's own terms list two different office addresses. The policy also lets the app collect "emergency contact" names and phone numbers [Figure 9]. These people are never asked for consent, and the literature links such data to debt-collection harassment in predatory loan apps (Akanji, Egele and Stringhini, 2026).
 

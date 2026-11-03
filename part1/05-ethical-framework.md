@@ -1,10 +1,12 @@
-## Issue A: Location is requested before the user has an account.  
+# Ethical Framework
+
+## Issue A: Location is requested before the user has an account
 
 ### Violated Code of Ethics
 
 **1.06. Be fair and avoid deception in all statements, particularly public ones, concerning software or related documents, methods and tools.**
 
-Application: The app presents a disclosure list where only four of the five intended purposes for collecting location functionally depend on the user having an existing account, which is not the case for first-time users. This misleads and deceives the user regarding how the data is actually being used at that stage.
+Application: The disclosure statement gives five purposes for collecting location, but four of them (loan application review, regional fraud prevention, abnormal account access and account security) depend on the user having an account or a loan application, which a first-time user does not have. Only service-region eligibility could apply at this stage. Listing all five at first launch misleads and deceives the user regarding how the data is actually being used at that stage.
 
 **3.06. Work to follow professional standards, when available, that are most appropriate for the task at hand, departing from these only when ethically or technically justified.**
 
@@ -28,13 +30,13 @@ The morality of an action is based on whether it follows a set of rules or dutie
 
 The morality of an action is determined solely by its outcomes or consequences. A rule-utilitarian analysis shows that collecting out-of-context data erodes public trust in software platforms and exposes thousands of prospective users and contacts of said users to unwanted privacy risks without any immediate functional benefit.
 
-### Where SE Code is Insufficient
+### Where the SE Code Is Insufficient
 
-This issue causes a conflict between rule 2.09 (promote no interest adverse to their employer or client) and rule 3.12 (develop software and related documents that respect the privacy of those affected by the software). As the Code does not specify which principle takes a higher priority, deontology is used to show that the universal duty against deception and privacy invasion trumps corporate data-gathering goals.
+This issue appears to set clause 2.09 (promote no interest adverse to their employer or client) against clause 3.12 (respect the privacy of those affected by the software). The Code does give a priority rule: 2.09 applies "unless a higher ethical concern is being compromised", and the preamble states that concern for the public is "primary". What the Code does not say is whether collecting approximate location a few screens early is serious enough to count as a "higher ethical concern", and an engineer could reasonably argue that it is minor. Deontology settles this: the wrong lies in the misleading justification and the bypassing of informed consent, which are wrong regardless of how small the harm is. This is enough for the engineer to rely on the 2.09 exception and raise the concern with the employer.
 
 
 
-## Issue B: The app requests location twice before sign-up and a second denial triggers permanent “don't ask again”
+## Issue B: The app asks again when the user leaves the login page
 
 ### Violated Code of Ethics
 
@@ -106,13 +108,13 @@ Utilitarianism weighs consequences across affected parties. The company benefits
 
 **Care Ethics**
 
-The borrower is vulnerable due to financial need and limited understanding of compound rates, and the design exploits this imbalance. Care ethics asks whether a caring, responsible professional would reveal the full cost only when the borrower cannot back out. The answer is no. This theory captures the relational dimension the Code cannot, and it guides engineers whose concerns are ignored: continue advocating for the vulnerable party and document the concerns.
+The borrower is vulnerable due to financial need and limited understanding of how a small daily rate adds up over a year, and the design exploits this imbalance. Care ethics asks whether a caring, responsible professional would reveal the full cost only when the borrower cannot back out. The answer is no. This theory captures the relational dimension the Code cannot, and it guides engineers whose concerns are ignored: continue advocating for the vulnerable party and document the concerns.
 
 
 
 ## Issue D: Users cannot check who the lender is or contact it without signing in
 
-## Violated Code of Ethics
+### Violated Code of Ethics
 
 **1.06. Be fair and avoid deception in all statements, particularly public ones, concerning software or related documents, methods and tools.**
 
@@ -134,7 +136,7 @@ Application: The engineer designed the software to gather contact details of non
 
 Application: The app prominently displays a “licensed in Malaysia” badge on the home screen whilst wiring the button to a Whatsapp sign-in form instead of displaying the license number creates a deceptive and misleading claim about the app’s transparency and licensing features. 
 
-## Ethical Theory
+### Ethical Theory
 
 **Deontology**
 
@@ -143,7 +145,8 @@ The morality of an action is based on whether it follows a set of rules or dutie
 **Utilitarianism (Consequentialism)**
 
 The morality of an action is determined solely by its outcomes or consequences. While hiding contact details and requiring sign-in may benefit the lender and forcing user registration and capturing lead data, it creates widespread harm across stakeholders and borrowers. The borrowers are also left without support or verifiable credentials and non-user contacts suffer potential harassment and distress because the app’s deceptive claims damage overall public trust.
-		
+
 ### Where the SE Code Is Insufficient
- The code is silent on areas pertaining to harvesting data from unconsenting non-user third parties, collected as emergency contacts. A Kantian framework is required to establish that non-users possess equal rights to consent and privacy. As the business chooses to hide the support behind Whatsapp and employ predatory monetisation tactics, utilitarianism helps engineers to identify when they need to exercise professional courage to report systemic corporate misconduct.
+
+The code is silent on areas pertaining to harvesting data from unconsenting non-user third parties, collected as emergency contacts. A Kantian framework is required to establish that non-users possess equal rights to consent and privacy. As the business chooses to hide the support behind Whatsapp and employ predatory monetisation tactics, utilitarianism helps engineers to identify when they need to exercise professional courage to report systemic corporate misconduct.
 
