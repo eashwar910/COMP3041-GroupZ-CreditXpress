@@ -10,21 +10,21 @@ This proposal reviews **Credit Xpress**, a Malaysian moneylender licensed mobile
 
 The app meets the three conditions mentioned in the coursework rubric:
 
-- **It is real and can be used hands-on**. The app is free to install from Google Play and the App Store.
-- **It is small and local.** It operates only in Malaysia, and we found no academic studies of the app itself. Published research covers only the wider category of digital loan apps like Akanji, Egele and Stringhini (Pervez et al., 2026). So, a first-hand review of a licensed local lender adds evidence that the published literature lacks.
-- **It has clear ethically relevant features.** It collects personal and device data like location, identity details which the privacy policy says are used "for risk assessment and scoring" (Credit Xpress, 2026a). It handles loans, and its users are likely to be vulnerable people who need cash quickly and for them, a design that pressures them to share data can shape a decision about their money.
+- **It is real and can be used hands-on.** The app is free to install from Google Play and the App Store.
+- **It is small and local.** It operates only within Malaysia and there have not been any academic studies done of the app itself. Published research covers only the wider category of digital loan apps like Akanji, Egele and Stringhini (Pervez et al., 2026). So, a first-hand review of a licensed local lender adds evidence lacking in the published literature read.
+- **It has clear ethically relevant features.** It collects personal and device data like location, identity details which the privacy policy states are used "for risk assessment and scoring" (Credit Xpress, 2026a). This app is designed to prey on vulnerable users who need cash quickly and pressure them to share data that could shape a decision about their money.
 
 ---
 
 ## 2. Method
 
-Our preliminary investigation combined the following three techniques:
+Our preliminary investigation used these three techniques:
 
-1. **Hands-on walkthroughs.** We installed the app fresh on an Android test device with an empty contact list and recorded every screen from first launch (Xiaomi Pad 7, Android 16, app version 2.1.2, 26/10/2026). We then repeated the flow, denying each permission request, to see how the app handles refusal. A second walkthrough on iOS (iPhone 15 Pro, iOS 26.6.2, app version 1.7.6, 29/10/2026) recorded everything a person can learn from the home screen before signing in.
+1. **Hands-on walkthroughs.** We installed the app fresh on an Android test device with an empty contact list and recorded every screen from first launch (Xiaomi Pad 7, Android 16, app version 2.1.2, 26/10/2026). We then repeatedly denied each permission request to see how the app handles refusal. A second walkthrough on iOS (iPhone 15 Pro, iOS 26.6.2, app version 1.7.6, 29/10/2026) recorded everything a person can learn from the home screen before signing in.
 
 2. **Document analysis.** We read the in-app privacy policy and the terms and conditions on the company website (Credit Xpress, 2026b), and visited the domain the policy names as its data-processing domain.
 
-3. **Comparison with platform standards.** We compared what we observed with Android's permission guidance (Android Developers, 2026), Google Play's Financial Services policy (Google, 2026) and Apple's App Review Guidelines for personal-loan apps (Apple, 2026).
+3. **Comparison with platform standards.** We compared our observations with Android's permission guidance (Android Developers, 2026), Google Play's Financial Services policy (Google, 2026), and Apple's App Review Guidelines for personal-loan apps (Apple, 2026).
 
 We used only our own details, did not use a phone number and did not apply for a loan. We used no surveys or interviews, as these require ethics approval. Our findings reflect two devices and one app version per platform, and cover only the part of the app that can be used before sign-in.
 
@@ -36,7 +36,7 @@ We used only our own details, did not use a phone number and did not apply for a
 
 **Android.** The first screen is a disclosure statement (Figure 1). Agreeing to it triggers a request for approximate location (Figure 2), then a request to send notifications (Figure 3), before any account or sign-in screen appears. Tapping any button then opens the login page (Figure 4). If the user backs out of the login page, both requests appear again.
 
-**iOS.** The app opens straight to a browsable home screen showing "The highest amount RM 10,000", "Daily rate 0.05%", "Loan term up to 91 days" and an "Apply Now" button (Figure 5). Tapping "Licensed in Malaysia", "More flexible repayment terms" or the support icon opens the login page (Figure 6). The login page asks for a WhatsApp number and a one-time password (OTP). The iOS screen sends the OTP by WhatsApp only, while Android also offers an SMS OTP. Neither offers email, password or guest access.
+**iOS.** The app opens straight to a browsable home screen showing "The highest amount RM 10,000", "Daily rate 0.05%", "Loan term up to 91 days" and an "Apply Now" button (Figure 5). Tapping "Licensed in Malaysia", "More flexible repayment terms", or the support icon opens the login page (Figure 6). First, the login page asks for a WhatsApp number and a one-time password (OTP). Then, the iOS screen sends the OTP by WhatsApp only contrasting with Android that also offers an SMS OTP. Neither system offers email, password or guest access.
 
 The privacy policy treats "using our Services" as acknowledgement, refers to "Android runtime permissions" inside the iOS app (Figures 7–8), and names a "data processing domain" (creditxpressx.com) that returned "404 Not Found" on 29/10/2026. The website's terms give two different office addresses, and advertise "RM500–RM20,000" against the app's RM 10,000.
 
@@ -46,25 +46,25 @@ We identified four issues, each with a fair reading: the most charitable legitim
 
 An engineer placed the location request on the very first screen, before sign-up or any loan terms, so a person who has not chosen to apply is already being asked for scoring data. Android's guidance says to ask "in context, when the user starts to interact with the feature that requires it" (Android Developers, 2026). The disclosure statement gives five purposes for location (Figure 1), but only one, service-region eligibility, could apply before sign-up. The other four need an account or a loan application, and the user has neither.
 
-> **Fair reading:** a Malaysia-only lender may need approximate location to screen out overseas applicants, and Google bans only *precise* location for loan apps (Google, 2026). The concern is not what is requested, but when.
+> **Fair reading:** a Malaysia-only lender may need an approximate location to screen out overseas applicants, and Google bans only *precise* location for loan apps (Google, 2026). Hence, the concern is not what permission is requested, but when.
 
 ### Issue B: The app asks again when the user leaves the login page
 
-The second round of requests is tied to leaving the login page, an action unrelated to location or notifications, and is shown to a user who has just shown *less* interest in the service. On Android 11 and later, a second denial counts as a permanent "don't ask again" (Android Developers, 2026). The app therefore uses every request the operating system allows before the user has signed up or seen any terms, when the same guidance tells developers to "gracefully degrade your app so that the user can continue" after a refusal.
+The app sends a second round of requests to the user leaving the login page, an action unrelated to location or notifications, and this screen is shown to a user who has just shown *less* interest in the service. On Android version 11 and later, a second denial counts as a permanent "don't ask again" (Android Developers, 2026). The app therefore uses every request the operating system allows before the user has signed up or read any of the terms, when best software engineering practices tell developers to "gracefully degrade your app so that the user can continue" after a refusal.
 
 > **Fair reading:** notifications carry little privacy risk, and the requests themselves may be legitimate. What we question is how a refusal is handled.
 
 ### Issue C: The cost of borrowing is shown as a small daily rate, not an annual rate
 
-The only price shown before sign-up is "Daily rate 0.05%" (Figure 5). Neither the app nor the website gives an annual percentage rate (APR), fees, stamp duty or a sample total repayment. The terms say interest is "as stated in the Moneylending Agreement", which is signed after approval, and that "once you have submitted a loan application, cancellation of the application is not allowed" (Credit Xpress, 2026b). The full cost therefore appears only when the borrower can no longer back out.
+The only price shown before sign-up is "Daily rate 0.05%" (Figure 5). Neither the app nor the website gives an annual percentage rate (APR), fees, stamp duty or a sample total repayment. The terms say interest is "as stated in the Moneylending Agreement", which is signed after approval, and that "once you have submitted a loan application, cancellation of the application is not allowed" (Credit Xpress, 2026b). The full cost is only displayed when the borrower can no longer back out.
 
-0.05% sounds negligible, but over a year it comes to about 18.25% simple interest. Malaysia caps unsecured moneylender loans at 18% a year (The Vibes, 2025), so the true annual figure sits at or near the legal limit, and the daily figure hides this. Apple requires personal-loan apps to "clearly and conspicuously disclose all loan terms, including … equivalent maximum Annual Percentage Rate (APR)" (Apple, 2026, 3.2.2(ix)), and this screen does not.
+0.05% may appear to be negligible, but over a year it comes to about 18.25% simple interest. Malaysia caps unsecured moneylender loans at 18% a year (The Vibes, 2025), so the true annual figure sits at or near the legal limit, but the daily figure hides this. Apple requires personal-loan apps to "clearly and conspicuously disclose all loan terms, including … equivalent maximum Annual Percentage Rate (APR)" (Apple, 2026, 3.2.2(ix)), and this screen does not.
 
 > **Fair reading:** the daily rate is accurate, short loans are sometimes priced daily, and fees may appear in the agreement. We question why the figure least likely to alarm a borrower is the only one shown.
 
 ### Issue D: Users cannot check who the lender is or contact it without signing in
 
-The home screen says "Licensed in Malaysia", but tapping it opens the login page rather than a licence number (Figure 6). The support icon does the same, so a person with a question or complaint must first hand over a phone number. The documents that should fill this gap are unreliable: the data-processing domain is dead, the iOS policy refers to Android, and the terms give two addresses. The policy also allows the app to collect "emergency contact" names and phone numbers (Figure 9). These people are never asked for consent.
+The home screen says "Licensed in Malaysia", but tapping it opens the login page rather than a licence number (Figure 6). The support icon does the same, so a person with a question or complaint must first hand over a phone number. The documents that should fill this gap are unreliable: the data-processing domain is dead, the iOS policy refers to Android, and the terms give two addresses. The policy also allows the app to collect "emergency contact" names and phone numbers (Figure 9). These contacts are users that have never provided consent for their number to be collected.
 
 > **Fair reading:** the licence number and addresses are on the website, so the information exists. The engineering choice is to put it behind sign-in inside the app, where most users will look.
 
@@ -72,13 +72,13 @@ The home screen says "Licensed in Malaysia", but tapping it opens the login page
 
 ## 4. Literature Review
 
-**Early data collection.** Akanji, Egele and Stringhini (2026) measured 435 Android loan apps in five countries outside Malaysia. They found that 73.4% of approved apps broke Google's or national permission rules, and 37 of the 148 that launched sent sensitive data immediately, before any registration. Pervez et al. (2026) found that 85% of participants with limited literacy did not understand basic app permissions. Both support Issue A. The literature describes apps that block users who refuse; it does not describe the softer pattern in Issue B, where a refusal is met with repeated prompts.
+Akanji, Egele and Stringhini (2026) measured 435 Android loan apps in five countries outside Malaysia. They found that 73.4% of approved playstore apps broke Google's or national permission rules, and 37 of the 148 that launched sent sensitive data immediately prior to any registration similar to the issue given in issue A. Pervez et al. (2026) also found that 85% of participants with limited literacy did not understand the basic app permissions requested. Furthermore the literature describes apps that block users who refuse, which is different to the softer pattern described in Issue B, where a refusal is met with repeated prompts.
 
-**Hiding the cost.** Mathur et al. (2019) found dark patterns on about 11% of 11,000 shopping websites, including designs that withhold information until late. We found no study that tests daily-rate framing in loan apps. The closest evidence is Morwitz, Greenleaf and Johnson (1998): when a price is split into smaller parts, consumers recall a lower total. A daily rate plausibly works the same way, which is why both app stores require loan apps to disclose the APR (Apple, 2026; Google, 2026). This supports Issue C.
+In addition, the literature discusses how dark patterns hide the real cost of borrowing and trap users in unfair agreements. Regular e-commerce platforms tend to use misleading UI techniques to boost engagement. In contrast, digital lenders manipulate these designs to mask financial liability. The literature shows predatory platforms often display borrowing costs as tiny daily rates instead of legally capped annual percentage rates (APR), putting off full disclosure until the application can't be cancelled. This deliberate information gap stops vulnerable users often desperate for cash from making informed comparisons. These aren't just bad interfaces; they're calculated strategies made to dodge regulatory transparency rules (Apple, 2026; Google, 2026), making sure the full cost only surfaces once the borrower is entrapped.
 
-**Harm beyond the borrower.** Akanji, Egele and Stringhini (2026) link contact data in loan apps to debt-collection shaming of people who never installed the app, a harm they call "entirely non-consensual". Consent research explains why "consent by use" protects little: individuals cannot realistically assess how their data will be used (Solove, 2013), and most skip privacy policies entirely (Obar and Oeldorf-Hirsch, 2020). This supports Issue D.
+### Predatory Trust Mechanisms and Accountability Evasion
 
-**The gap.** Existing studies are large-scale, automated and focused on unlicensed apps outside Malaysia. None examines a licensed Malaysian lender, iOS, or how an app's design times its requests and its disclosure of cost. Our walkthrough addresses this.
+Finally, the literature describes how digital lenders manipulate trust signals while dodging accountability. Platforms often imitate legitimate websites through superficial licensing claims on public screens, but then make it difficult to verify that information or contact the lender directly. As Akanji, Egele, and Stringhini (2026) point out, operational transparency is often hidden behind mandatory sign-in walls, sometimes restricting access exclusively to third-party services like WhatsApp. Moreover, the literature ties forced extraction of personal data including emergency contacts to aggressive debt-collection harassment in the future. By hiding lender details and treating mere app usage as legal acknowledgement of broken privacy policies (e.g. routing users to dead data-processing domains), these systems pretend to adhere to the SE Code of Ethics whilst leaving borrowers completely stranded and unprotected.
 
 ---
 
